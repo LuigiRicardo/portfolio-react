@@ -4,8 +4,13 @@ import linkedinLogo from '../assets/img/linkedin_logo.png'
 import instagramLogo from '../assets/img/instagram_logo.png'
 import gmailLogo from '../assets/img/gmail_logo.png'
 import whatsappLogo from '../assets/img/whatsapp_logo.png'
+import { useTranslation } from 'react-i18next';
 
 function Sidebar({activeTab, onTabChange}) {
+    const { t, i18n } = useTranslation();
+    const changeLanguage = (lang) => {
+        i18n.changeLanguage(lang);
+    }
     const getButtonClass = (tabName) => {
         return activeTab === tabName ? 'active' : '';
     }
@@ -16,18 +21,31 @@ function Sidebar({activeTab, onTabChange}) {
                 <div className="profile">
                     <img src={profilePic} id="profile_pic" alt="Luigi Ricardo" />
                     <h1>Luigi Ricardo</h1>
-                    <h2>Information systems student</h2>
-                    <h2>Front-end developer</h2>
+                    <h2>{t('sidebar.role')}</h2>
+                    <h2>{t('sidebar.role2')}</h2>
                 </div>
-
+                <div className="lang-switcher" style={{ marginTop: '10px', display: 'flex', gap: '10px', justifyContent: 'center' }}>
+                    <button 
+                        onClick={() => changeLanguage('pt')} 
+                        style={{ padding: '5px', cursor: 'pointer', border: i18n.language.includes('pt') ? '2px solid var(--accent-color)' : '1px solid #333' }}
+                    >
+                        🇧🇷
+                    </button>
+                    <button 
+                        onClick={() => changeLanguage('en')}
+                        style={{ padding: '5px', cursor: 'pointer', border: i18n.language.includes('en') ? '2px solid var(--accent-color)' : '1px solid #333' }}
+                    >
+                        🇺🇸
+                    </button>
+                </div>
                 <nav aria-label="Primary navigation">
                     <ul>
                         <li>
                             <button
                                 className={getButtonClass('about')}
                                 onClick={() => onTabChange('about')}
-                            >
-                                About
+                            >   
+                                {t('sidebar.about')}
                             </button>
                         </li>
                         <li>
@@ -35,7 +53,7 @@ function Sidebar({activeTab, onTabChange}) {
                                 className={getButtonClass('experience')}
                                 onClick={() => onTabChange('experience')}
                             >
-                                Experience
+                                {t('sidebar.experience')}
                             </button>
                         </li>
                         <li>
@@ -43,7 +61,7 @@ function Sidebar({activeTab, onTabChange}) {
                                 className={getButtonClass('projects')}
                                 onClick={() => onTabChange('projects')}
                             >
-                                Projects
+                                {t('sidebar.projects')}
                             </button>
                         </li>
                         <li>
@@ -51,7 +69,7 @@ function Sidebar({activeTab, onTabChange}) {
                                 className={getButtonClass('education')}
                                 onClick={() => onTabChange('education')}
                             >
-                                Education
+                                {t('sidebar.education')}
                             </button>
                         </li>
                     </ul>

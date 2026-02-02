@@ -1,0 +1,42 @@
+{
+    "sidebar": {
+        "role": "Information Systems Student",
+        "role2": "Front-end Developer",
+        "about": "About",
+        "experience": "Experience",
+        "projects": "Projects",
+        "education": "Education"
+    },
+    "about": {
+        "title": "About",
+        "description": "My name is Luigi Ricardo da Silva. I am a 22-year-old Brazilian student pursuing a degree in Information Systems at UNIFEI. Currently in my second year, I am looking for an opportunity to launch my career in the technology sector as a Developer (Intern, Trainee, or Junior). I have built a solid foundation in web and software development, with proficiency in HTML, CSS, JavaScript, and Python. My technical skillset also extends to data management using SQL and Power BI, alongside cloud fundamentals in AWS. Additionally, I am skilled in GIMP and Photoshop, allowing me to bridge the gap between backend logic and visual presentation. Professionally, I am known for my analytical thinking and collaborative spirit. I thrive in team settings and am deeply committed to continuous learning, ensuring I stay up-to-date with the ever-evolving tech landscape."
+    },
+    "experience": {
+        "title": "Experience",
+        "job1_title": "Administrative Assistant Intern",
+        "job1_loc": "Town Hall, Piranguçu - MG",
+        "job1_desc1": "Assist with daily office operations, document organization, and data entry using Microsoft Office.",
+        "job1_desc2": "Proactive Process Automation: Took the initiative to develop automation scripts using Python and SQL. Integrated these with Excel to query the local database, significantly reducing manual data entry time and increasing report accuracy.",
+        "job1_desc3": "IT Support & Troubleshooting: Provided first-level technical support to the team, diagnosing and resolving issues related to network connectivity, hardware performance, and software configuration.",
+        "job2_title": "Chef de Partie",
+        "job2_loc": "Emporium, Itajubá - MG",
+        "job2_desc1": "Team lead: Worked closely with a diverse team to ensure operational excellence, maintaining clear communication channels to coordinate complex workflows effectively.",
+        "job2_desc2": "Standardization & QA: Ensured strict adherence to quality standards and operational protocols, a mindset I now apply to code quality and software testing.",
+        "job2_desc3": "High-Performance Environment: Thrived in a fast-paced, high-pressure environment, requiring rapid decision-making, strict time management, and adaptability to changing scenarios."
+    },
+    "projects": {
+        "title": "Projects",
+        "loading": "Loading GitHub repositories...",
+        "error": "Error loading projects.",
+        "view_code": "View Code",
+        "demo": "Live Demo"
+    },
+    "education": {
+        "title": "Education",
+        "uni1_title": "B.Sc. in Information Systems UNIFEI – Federal University of Itajubá | Itajubá - MG, Brazil Expected Graduation: 12/2028",
+        "uni1_desc1": "Focus on Software Development, Algorithms, Database Management.",
+        "uni1_desc2": "Current Status: 2nd Year Undergraduate",
+        "uni2_title": "Associate Degree in Gastronomy SENAC | Campos do Jordão - MG, Brazil | Graduated: 2023",
+        "uni2_desc1": "Key skills gained: Discipline, Workflow organization, Resource and time management."
+    }
+    }

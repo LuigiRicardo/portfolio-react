@@ -1,0 +1,38 @@
+{
+    "sidebar": {
+        "role": "Estudante de Sistemas de Informação",
+        "role2": "Desenvolvedor Front-end",
+        "about": "Sobre",
+        "experience": "Experiência",
+        "projects": "Projetos",
+        "education": "Educação"
+    },
+    "about": {
+        "title": "Sobre Mim",
+        "description": "Meu nome é Luigi Ricardo da Silva. Tenho 22 anos e sou estudante de Sistemas de Informação na UNIFEI. Atualmente no segundo ano da graduação, busco uma oportunidade para iniciar minha carreira no setor de tecnologia como Desenvolvedor (Estágio, Trainee ou Júnior). Construí uma base sólida em desenvolvimento web e de software, com proficiência em HTML, CSS, JavaScript e Python. Minhas competências técnicas também englobam gestão de dados com SQL e Power BI, além de fundamentos em computação em nuvem (AWS). Além disso, possuo domínio de ferramentas como GIMP e Photoshop, o que me permite transitar bem entre a lógica de programação e a apresentação visual. Profissionalmente, destaco-me pelo pensamento analítico e espírito colaborativo. Tenho facilidade para trabalhar em equipe e um forte compromisso com o aprendizado contínuo, buscando estar sempre alinhado às inovações do mercado tecnológico."
+    },
+    "experience": {
+        "title": "Experiência Profissional",
+        "job1_title": "Estagiário Administrativo",
+        "job1_loc": "Prefeitura de Piranguçu - MG | 04/2025 - Atualmente",
+        "job1_desc": "Auxílio nas operações diárias do escritório, organização de documentos e entrada de dados utilizando Microsoft Office. Automação Proativa de Processos: Tomei a iniciativa de desenvolver scripts de automação usando Python e SQL, integrando-os com Excel para consultar o banco de dados local. Isso reduziu significativamente o tempo de entrada manual de dados e aumentou a precisão dos relatórios. Suporte de TI: Prestei suporte técnico de primeiro nível à equipe, diagnosticando e resolvendo problemas de conectividade de rede, hardware e configuração de software.",
+        "job2_title": "Chef de Cozinha",
+        "job2_loc": "Emporium, Itajubá - MG | 02/2024 - 08/2024",
+        "job2_desc": "Liderança de equipe: Trabalhei em estreita colaboração com uma equipe diversificada para garantir excelência operacional, coordenando fluxos de trabalho complexos. Padronização e QA: Garanti a estrita adesão aos padrões de qualidade e protocolos operacionais, uma mentalidade que agora aplico à qualidade de código e testes de software. Ambiente de Alto Desempenho: Atuei em um ambiente acelerado e de alta pressão, exigindo tomada de decisão rápida, gestão rigorosa do tempo e adaptabilidade."
+    },
+    "projects": {
+        "title": "Projetos",
+        "loading": "Carregando repositórios...",
+        "error": "Erro ao carregar projetos.",
+        "view_code": "Ver Código",
+        "demo": "Demo Online"
+    },
+    "education": {
+        "title": "Educação",
+        "uni1_title": "Bacharelado em Sistemas de Informação | UNIFEI – Universidade Federal de Itajubá | Itajubá - MG, Brasil | Graduação estimada: 12/2028",
+        "uni1_desc1": "Focus on Software Development, Algorithms, Database Management.",
+        "uni1_desc2": "Current Status: 2nd Year Undergraduate",
+        "uni2_title": "Tecnólogo em Gastronomia | SENAC | Campos do Jordão - MG, Brasil | Graduated: 2023",
+        "uni2_desc1": "Principais habilidades adquiridas: Disciplina, organização de fluxo de trabalho, gestão de recursos e tempo."
+    }
+}

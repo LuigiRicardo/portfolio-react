@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
+import { useTranslation } from 'react-i18next';
 
 function Projects() {
-    // Configuração: Quanto tempo o cache deve durar?
-    // 1000 ms * 60 s * 60 m = 1 hora
+    const { t } = useTranslation();
     const CACHE_DURATION = 1000 * 60 * 60; 
     const CACHE_KEY = 'my_portfolio_repos';
 
@@ -84,10 +84,10 @@ function Projects() {
 
     return (
         <div className="section active">
-            <h2>Projects</h2>
+            <h2>{t('projects.title')}</h2>
             
             {loading ? (
-                <p className="loading">Atualizando projetos do GitHub...</p>
+                <p className="loading">{t('projects.loading')}</p>
             ) : (
                 <div className="projects-grid">
                     {Array.isArray(repos) && repos.map((repo) => (
@@ -101,11 +101,11 @@ function Projects() {
 
                             <div className="project-links">
                                 <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
-                                    Ver Código
+                                    {t('projects.view_code')}
                                 </a>
                                 {repo.homepage && (
                                     <a href={repo.homepage} target="_blank" rel="noopener noreferrer">
-                                        Demo
+                                        {t('projects.demo')}
                                     </a>
                                 )}
                             </div>

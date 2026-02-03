@@ -10,4 +10,16 @@ export default defineConfig({
     compression(),
     cssInjectedByJsPlugin()
   ],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          // Se o arquivo vier de node_modules, crie um arquivo separado chamado 'vendor'
+          if (id.includes('node_modules')) {
+            return 'vendor';
+          }
+        },
+      },
+    },
+  },
 })

@@ -7,37 +7,14 @@
     --accent-bg-subtle: rgba(217, 173, 91, 0.05);
     --border-radius: 12px;
     --font-main: "Montserrat", sans-serif;
-}
-
-@font-face {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 300;
-    src: url('./assets/fonts/montserrat-v31-latin-300.woff2') format('woff2');
-    font-display: swap;
+    -webkit-font-smoothing: antialiased;
 }
 
 @font-face {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
-    src: url('./assets/fonts/montserrat-v31-latin-regular.woff2') format('woff2');
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    src: url('./assets/fonts/montserrat-v31-latin-500.woff2') format('woff2');
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    src: url('./assets/fonts/montserrat-v31-latin-600.woff2') format('woff2');
+    src: url('/fonts/montserrat-v31-latin-regular.woff2') format('woff2');
     font-display: swap;
 }
 
@@ -45,20 +22,20 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
-    src: url('./assets/fonts/montserrat-v31-latin-700.woff2') format('woff2');
+    src: url('/fonts/montserrat-v31-latin-700.woff2') format('woff2');
     font-display: swap;
 }
 /* BASE / MOBILE FIRST */
 /* Link de Acessibilidade (Skip to Content) */
 .skip-link {
     position: absolute;
-    top: -40px;
+    top: -100px;
     left: 0;
     background: var(--accent-color);
     color: var(--bg-color);
     padding: 8px;
     z-index: 1000;
-    font-weight: bold;
+    font-weight: 700;
     transition: top 0.3s;
     text-decoration: none;
     border-radius: 0 0 8px 0;
@@ -180,6 +157,13 @@ body {
     display: flex;
     flex-direction: column;
     text-align: left;
+    overflow-y: auto; 
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none;
 }
 
 .sidebar_top {
@@ -216,6 +200,28 @@ body {
     object-fit: cover; 
 }
 
+/* Estilo base do botão de idioma */
+.lang-btn {
+    color: #FFF;
+    padding: 5px;
+    cursor: pointer;
+    background: transparent;
+    border-radius: 4px;
+    border: 1px solid #333; 
+    transition: all 0.2s ease;
+    font-size: 1.2rem; 
+}
+
+/* Estado ativo (quando o idioma está selecionado) */
+.lang-btn.active {
+    border: 2px solid var(--accent-color);
+    transform: scale(1.1); 
+}
+
+.lang-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Um efeito hover suave */
+}
+
 /* Navegação */
 
 nav ul {
@@ -246,7 +252,7 @@ nav button:hover {
 
 nav button.active {
     background-color: var(--accent-color);
-    font-weight: bold;
+    font-weight: 700;
 }
 
 /* Social */
@@ -351,7 +357,6 @@ nav button.active {
     .sidebar {
         position: static; /* Volta ao normal */
         left: auto;
-        width: 320px;
         box-shadow: none;
         transform: none;
     }

@@ -1,18 +1,19 @@
-import { useState } from 'react'
+import { useState, Suspense, lazy } from 'react' // 1. Adicionado Suspense e lazy
 import Sidebar from './components/Sidebar'
-import About from './components/About'
-import Experience from './components/Experience'
-import Projects from './components/Projects'
-import Education from './components/Education'
+import About from './components/About' // Mantemos About fixo para carregar instantâneo
 import './App.css'
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 
+// 2. Importações Dinâmicas (Lazy)
+// O navegador só baixa esses arquivos quando o usuário clicar na aba
+const Experience = lazy(() => import('./components/Experience'));
+const Projects = lazy(() => import('./components/Projects'));
+const Education = lazy(() => import('./components/Education'));
+
 function App() {
   const { t, i18n } = useTranslation();
   const [activeTab, setActiveTab] = useState('about')
-  
-  // NOVO: Estado para controlar se o menu mobile está aberto
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
@@ -22,26 +23,28 @@ function App() {
         <meta name="description" content={t('about.description').substring(0, 160)} />
         <html lang={i18n.language} />
       </Helmet>
+
       <a href="#main-content" className="skip-link">
         Pular para o conteúdo principal
       </a>
-      {/* 1. Botão Hambúrguer (Só aparece no mobile via CSS) */}
+
+      {/* Botão Hambúrguer */}
       <button 
         className="menu-toggle" 
         onClick={() => setIsMenuOpen(true)}
         aria-label="Abrir menu de navegação"
-        aria-expanded={isMenuOpen} // Diz o estado atual (true/false)
+        aria-expanded={isMenuOpen}
         aria-controls="sidebar-nav"
       >
-        <span aria-hidden="true">☰</span> {/* O ícone visual é ignorado pelo leitor */}
+        <span aria-hidden="true">☰</span>
       </button>
 
-      {/* 2. Fundo Escuro (Só aparece se o menu estiver aberto) */}
+      {/* Overlay Escuro */}
       {isMenuOpen && (
         <div className="overlay" onClick={() => setIsMenuOpen(false)}></div>
       )}
       
-      {/* 3. Passamos as props de controle para a Sidebar */}
+      {/* Sidebar */}
       <Sidebar 
         activeTab={activeTab} 
         onTabChange={setActiveTab} 
@@ -50,18 +53,20 @@ function App() {
       />
 
       <section id="main-content" className="content" tabIndex="-1">
-        <div style={{ display: activeTab === 'about' ? 'block' : 'none' }}>
-          <About />
-        </div>
-        <div style={{ display: activeTab === 'experience' ? 'block' : 'none' }}>
-            <Experience />
-        </div>
-        <div style={{ display: activeTab === 'projects' ? 'block' : 'none' }}>
-            <Projects />
-        </div>
-        <div style={{ display: activeTab === 'education' ? 'block' : 'none' }}>
-            <Education />
-        </div>
+
+        {activeTab === 'about' && <About />}
+
+        {/* As outras abas carregam sob demanda */}
+        <Suspense fallback={<div style={{ padding: '2rem', color: '#fff' }}>Carregando...</div>}>
+          
+          {activeTab === 'experience' && <Experience />}
+          
+          {activeTab === 'projects' && <Projects />}
+          
+          {activeTab === 'education' && <Education />}
+          
+        </Suspense>
+
       </section>
 
     </main>

@@ -30,22 +30,25 @@ function Sidebar({ activeTab, onTabChange, isOpen, onClose }) {
             <button className="close-btn" onClick={onClose}>&times;</button>
 
             <div className="sidebar_top">
-                <div className="lang-switcher" style={{ marginTop: '10px', display: 'flex', gap: '10px', justifyContent: 'center' }}>
+                <div className="language-selector">
                     <button 
+                        className={`lang-btn ${i18n.language.includes('pt') ? 'active' : ''}`}
                         onClick={() => changeLanguage('pt')} 
-                        style={{ padding: '5px', cursor: 'pointer', border: i18n.language.includes('pt') ? '2px solid var(--accent-color)' : '1px solid #333', background: 'transparent', borderRadius: '4px' }}
+                        aria-label="Mudar para Português"
                     >
                         🇧🇷
                     </button>
+                    
                     <button 
+                        className={`lang-btn ${i18n.language.includes('en') ? 'active' : ''}`}
                         onClick={() => changeLanguage('en')}
-                        style={{ padding: '5px', cursor: 'pointer', border: i18n.language.includes('en') ? '2px solid var(--accent-color)' : '1px solid #333', background: 'transparent', borderRadius: '4px' }}
+                        aria-label="Switch to English"
                     >
                         🇺🇸
                     </button>
                 </div>
                 <div className="profile">
-                    <img src={profilePic} id="profile_pic" alt="Luigi Ricardo" width="200" height="200"/>
+                    <img src={profilePic} id="profile_pic" alt="Luigi Ricardo" width="200px" height="200px"/>
                     <h1>Luigi Ricardo</h1>
                     <h2>{t('sidebar.role')}</h2>
                     <h2>{t('sidebar.role2')}</h2>
@@ -91,19 +94,19 @@ function Sidebar({ activeTab, onTabChange, isOpen, onClose }) {
 
             <div className="social">
                 <a href="https://github.com/LuigiRicardo" target="_blank" rel="noopener noreferrer" aria-label={t('social.github')}>
-                    <img src={githubLogo} alt="" aria-hidden="true" height="20" />
+                    <img src={githubLogo} alt="" aria-hidden="true" height="20px" width="20px" />
                 </a>
                 <a href="https://www.linkedin.com/in/luigiricardo" target="_blank" rel="noopener noreferrer" aria-label={t('social.linkedin')}>
-                    <img src={linkedinLogo} alt="" aria-hidden="true" height="20" />
+                    <img src={linkedinLogo} alt="" aria-hidden="true" height="20px" width="20px" />
                 </a>
                 <a href="https://www.instagram.com/luidigdin/" target="_blank" rel="noopener noreferrer" aria-label={t('social.instagram')}>
-                    <img src={instagramLogo} alt="" aria-hidden="true" height="20" />
+                    <img src={instagramLogo} alt="" aria-hidden="true" height="20px" width="20px" />
                 </a>
                 <a href="mailto:luigi.ricardo123@gmail.com" target="_blank" rel="noopener noreferrer" aria-label={t('social.email')}>
-                    <img src={gmailLogo} alt="" aria-hidden="true" height="20" />
+                    <img src={gmailLogo} alt="" aria-hidden="true" height="20px" width="20px" />
                 </a>
                 <a href="https://wa.me/5535998896271" target="_blank" rel="noopener noreferrer" aria-label={t('social.whatsapp')}>
-                    <img src={whatsappLogo} alt="" aria-hidden="true" height="20" />
+                    <img src={whatsappLogo} alt="" aria-hidden="true" height="20px" width="20px" />
                 </a>
             </div>
         </header>

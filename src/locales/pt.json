@@ -13,13 +13,14 @@
     },
     "experience": {
         "title": "Experiência Profissional",
-        "job1_title": "Estagiário Administrativo",
-        "job1_loc": "Prefeitura de Piranguçu - MG | 04/2025 - Atualmente",
-        "job1_desc": "Auxílio nas operações diárias do escritório, organização de documentos e entrada de dados utilizando Microsoft Office. Automação Proativa de Processos: Tomei a iniciativa de desenvolver scripts de automação usando Python e SQL, integrando-os com Excel para consultar o banco de dados local. Isso reduziu significativamente o tempo de entrada manual de dados e aumentou a precisão dos relatórios. Suporte de TI: Prestei suporte técnico de primeiro nível à equipe, diagnosticando e resolvendo problemas de conectividade de rede, hardware e configuração de software.",
-        
-        "job2_title": "Chefe de Partida (Cozinha)",
-        "job2_loc": "Emporium, Itajubá - MG | 02/2024 - 08/2024",
-        "job2_desc": "Liderança de equipe: Trabalhei em estreita colaboração com uma equipe diversificada para garantir excelência operacional, coordenando fluxos de trabalho complexos. Padronização e QA: Garanti a estrita adesão aos padrões de qualidade e protocolos operacionais, uma mentalidade que agora aplico à qualidade de código e testes de software. Ambiente de Alto Desempenho: Atuei em um ambiente acelerado e de alta pressão, exigindo tomada de decisão rápida, gestão rigorosa do tempo e adaptabilidade."
+        "job1_title": "Estagiário Administrativo | Prefeitura de Piranguçu - MG | 04/2025 - Atualmente",
+        "job1_desc1": "Auxílio nas operações diárias do escritório, organização de documentos e entrada de dados utilizando Microsoft Office.",
+        "job1_desc2":"Automação Proativa de Processos: Tomei a iniciativa de desenvolver scripts de automação usando Python e SQL, integrando-os com Excel para consultar o banco de dados local. Isso reduziu significativamente o tempo de entrada manual de dados e aumentou a precisão dos relatórios.",
+        "job1_desc3":"Suporte de TI: Prestei suporte técnico de primeiro nível à equipe, diagnosticando e resolvendo problemas de conectividade de rede, hardware e configuração de software.",
+        "job2_title": "Chefe de Cozinha | Emporium, Itajubá - MG | 02/2024 - 08/2024",
+        "job2_desc1": "Liderança de equipe: Trabalhei em estreita colaboração com uma equipe diversificada para garantir excelência operacional, coordenando fluxos de trabalho complexos.",
+        "job2_desc2":"Padronização e QA: Garanti a estrita adesão aos padrões de qualidade e protocolos operacionais, uma mentalidade que agora aplico à qualidade de código e testes de software.",
+        "job2_desc3":"Ambiente de Alto Desempenho: Atuei em um ambiente acelerado e de alta pressão, exigindo tomada de decisão rápida, gestão rigorosa do tempo e adaptabilidade."
     },
     "projects": {
         "title": "Projetos",
@@ -30,12 +31,11 @@
     },
     "education": {
         "title": "Educação",
-        "uni_name": "Bacharelado em Sistemas de Informação",
-        "uni_loc": "UNIFEI – Universidade Federal de Itajubá",
-        "uni_desc": "Foco em Desenvolvimento de Software, Algoritmos e Gerenciamento de Banco de Dados. Status: 2º Ano da Graduação (Previsão: 12/2028).",
-        
-        "college_name": "Tecnólogo em Gastronomia",
-        "college_loc": "SENAC | Campos do Jordão - MG | Formado: 2023",
-        "college_desc": "Principais habilidades adquiridas: Disciplina, organização de fluxo de trabalho, gestão de recursos e tempo."
+        "uni1_name": "Bacharelado em Sistemas de Informação | UNIFEI – Universidade Federal de Itajubá",
+        "uni1_desc1": "Foco em Desenvolvimento de Software, Algoritmos e Gerenciamento de Banco de Dados.",
+        "uni1_desc2": "Status: 2º Ano da Graduação (Previsão: 12/2028).",
+        "uni2_name": "Tecnólogo em Gastronomia | SENAC | Campos do Jordão - MG",
+        "uni2_desc1": "Concluído em 2023",
+        "uni2_desc2": "Principais habilidades adquiridas: Disciplina, organização de fluxo de trabalho, gestão de recursos e tempo."
     }
 }

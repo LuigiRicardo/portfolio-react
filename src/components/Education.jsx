@@ -1,15 +1,19 @@
+import { useTranslation } from 'react-i18next';
+
 function education() {
+    const { t } =useTranslation()
     return (
         <div className="section active">
-            <h2>Education</h2>
-            <h3>B.Sc. in Information Systems UNIFEI – Federal University of Itajubá | Itajubá - MG, Brazil Expected Graduation: 12/2028</h3>
+            <h2>{t('education.title')}</h2>
+            <h3>{t('education.uni1_name')}</h3>
             <ul>
-                <li>Focus on Software Development, Algorithms, Database Management.</li>
-                <li>Current Status: 2nd Year Undergraduate</li>
+                <li>{t('education.uni1_desc1')}</li>
+                <li>{t('education.uni1_desc2')}</li>
             </ul>
-            <h3>Associate Degree in Gastronomy SENAC | Campos do Jordão - MG, Brazil | Graduated: 2023</h3>
+            <h3>{t('education.uni2_name')}</h3>
             <ul>
-                <li>Key skills gained: Discipline, Workflow organization, Resource and time management.</li>
+                <li>{t('education.uni2_desc1')}</li>
+                <li>{t('education.uni2_desc2')}</li>
             </ul>
         </div>
     )

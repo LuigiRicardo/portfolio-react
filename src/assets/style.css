@@ -91,6 +91,7 @@ body {
 }
 
 /* Navegação */
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -194,7 +195,7 @@ nav button.active {
 
 .language-tag {
     display: inline-block;
-    font-size: 0.75rem;
+    font-size: 1rem;
     padding: 4px 10px;
     border-radius: 12px;
     background: rgba(255, 255, 255, 0.1);

@@ -18,12 +18,6 @@ function Sidebar({activeTab, onTabChange}) {
     return (
         <header className="sidebar">
             <div className="sidebar_top">
-                <div className="profile">
-                    <img src={profilePic} id="profile_pic" alt="Luigi Ricardo" />
-                    <h1>Luigi Ricardo</h1>
-                    <h2>{t('sidebar.role')}</h2>
-                    <h2>{t('sidebar.role2')}</h2>
-                </div>
                 <div className="lang-switcher" style={{ marginTop: '10px', display: 'flex', gap: '10px', justifyContent: 'center' }}>
                     <button 
                         onClick={() => changeLanguage('pt')} 
@@ -37,6 +31,12 @@ function Sidebar({activeTab, onTabChange}) {
                     >
                         🇺🇸
                     </button>
+                </div>
+                <div className="profile">
+                    <img src={profilePic} id="profile_pic" alt="Luigi Ricardo" />
+                    <h1>Luigi Ricardo</h1>
+                    <h2>{t('sidebar.role')}</h2>
+                    <h2>{t('sidebar.role2')}</h2>
                 </div>
                 <nav aria-label="Primary navigation">
                     <ul>

@@ -38,5 +38,12 @@
         "uni2_name": "Associate Degree in Gastronomy | SENAC | Campos do Jordão - MG",
         "uni2_desc1": "Graduated in 2023",
         "uni2_desc2": "Key skills gained: Discipline, Workflow organization, Resource and time management."
+    },
+    "social": {
+        "github": "Visit my GitHub profile",
+        "linkedin": "Visit my LinkedIn profile",
+        "instagram": "Visit my Instagram profile",
+        "email": "Send me an email",
+        "whatsapp": "Contact me via WhatsApp"
     }
 }

@@ -57,6 +57,8 @@ function Projects() {
                 const response = await fetch('https://api.github.com/users/LuigiRicardo/repos')
                 const data = await response.json()
 
+                data.sort((a, b) => new Date(b.pushed_at) - new Date(a.pushed_at))
+
                 // Atualiza o estado da tela
                 setRepos(data)
                 setLoading(false)

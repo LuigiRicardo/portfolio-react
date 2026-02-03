@@ -1,42 +1,396 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* VARIAVEIS  */
+:root {
+    --bg-color: #0D0D0D;
+    --text-primary: #F2EA79;
+    --text-secondary: rgba(242, 234, 121, 0.8);
+    --accent-color: #D9AD5B;
+    --accent-bg-subtle: rgba(217, 173, 91, 0.05);
+    --border-radius: 12px;
+    --font-main: "Montserrat", sans-serif;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    src: url('./assets/fonts/montserrat-v31-latin-300.woff2') format('woff2');
+    font-display: swap;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/fonts/montserrat-v31-latin-regular.woff2') format('woff2');
+    font-display: swap;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    src: url('./assets/fonts/montserrat-v31-latin-500.woff2') format('woff2');
+    font-display: swap;
 }
 
-.card {
-  padding: 2em;
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    src: url('./assets/fonts/montserrat-v31-latin-600.woff2') format('woff2');
+    font-display: swap;
 }
 
-.read-the-docs {
-  color: #888;
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./assets/fonts/montserrat-v31-latin-700.woff2') format('woff2');
+    font-display: swap;
+}
+/* BASE / MOBILE FIRST */
+/* Link de Acessibilidade (Skip to Content) */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--accent-color);
+    color: var(--bg-color);
+    padding: 8px;
+    z-index: 1000;
+    font-weight: bold;
+    transition: top 0.3s;
+    text-decoration: none;
+    border-radius: 0 0 8px 0;
+}
+
+.skip-link:focus {
+    top: 0; /* Aparece quando recebe foco do teclado */
+}
+
+.menu-toggle {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 100; /* Acima de tudo */
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+/* Fundo Escuro (Overlay) quando o menu abre */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 40; /* Atrás do menu, na frente do conteúdo */
+    backdrop-filter: blur(2px);
+    animation: fadeIn 0.3s;
+}
+
+/* Botão de Fechar (X) dentro do menu */
+.close-btn {
+    align-self: flex-end;
+    background: transparent;
+    border: none;
+    color: var(--accent-color);
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* COMPORTAMENTO DA SIDEBAR NO MOBILE */
+@media (max-width: 1023px) {
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -100%; /* Escondido para a esquerda */
+        width: 85%;  /* Ocupa quase toda a tela */
+        max-width: 320px;
+        height: 100vh;
+        background-color: var(--bg-color);
+        z-index: 50;
+        transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 4px 0 15px rgba(0,0,0,0.5);
+        
+        /* Garantir que o conteúdo caiba */
+        overflow-y: auto;
+    }
+
+    /* Quando tem a classe .open, ele desliza para a tela */
+    .sidebar.open {
+        left: 0;
+    }
+    
+    /* Ajuste para o conteúdo não ficar por baixo do botão */
+    .content {
+        padding-top: 70px; 
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: var(--font-main);
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: left;
+}
+
+:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 3px;
+}
+
+/* LAYOUT */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    padding: 24px;
+    text-align: left;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* SIDEBAR */
+.sidebar {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.sidebar_top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Perfil */
+.profile {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.profile h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.profile h2 {
+    font-size: 1.1rem;
+    margin: 0;
+    color: var(--text-secondary);
+}
+
+#profile_pic {
+    height: auto;
+    width: 90%;
+    border-radius: 50%;
+    border: 4px solid var(--accent-color);
+    align-self: center;
+    object-fit: cover; 
+}
+
+/* Navegação */
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+nav button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 0.8em;
+    border: 2px solid var(--accent-color);
+    background-color: var(--text-primary);
+    color: var(--bg-color);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+nav button:hover {
+    filter: brightness(0.9);
+}
+
+nav button.active {
+    background-color: var(--accent-color);
+    font-weight: bold;
+}
+
+/* Social */
+.social {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.social img {
+    height: 20px;
+    transition: transform 0.2s;
+}
+
+.social img:hover {
+    transform: scale(1.1);
+}
+
+/* PROJECTS */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.project-card {
+    border: 1px solid var(--accent-color);
+    border-radius: var(--border-radius);
+    padding: 16px;
+    background-color: var(--accent-bg-subtle);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.project-card:hover {
+    background-color: rgba(217, 173, 91, 0.1);
+    transform: translateY(-2px);
+}
+
+.project-card h3 {
+    margin: 0 0 8px;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.project-card p {
+    margin: 0 0 12px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    flex-grow: 1; /* Faz o texto ocupar o espaço disponível */
+}
+
+.project-links {
+    display: grid;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.project-links a {
+    color: var(--text-primary);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-bottom: 1px solid transparent;
+}
+
+.project-links a:hover {
+    border-bottom: 1px solid var(--text-primary);
+}
+
+.language-tag {
+    display: inline-block;
+    font-size: 1rem;
+    padding: 4px 10px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    margin-top: 12px;
+    align-self: flex-start;
+}
+
+/* Estados de Loading */
+.loading, .error {
+    font-size: 1rem;
+    opacity: 0.8;
+    text-align: center;
+    padding: 20px;
+}
+
+/* DESKTOP (Media Queries) */
+@media (min-width: 1024px) {
+    /* Esconde elementos mobile no PC */
+    .menu-toggle, 
+    .close-btn, 
+    .overlay {
+        display: none !important;
+    }
+
+    /* Reseta a sidebar para o comportamento fixo que fizemos antes */
+    .sidebar {
+        position: static; /* Volta ao normal */
+        left: auto;
+        width: 320px;
+        box-shadow: none;
+        transform: none;
+    }
+    body {
+        overflow: hidden; 
+        background-color: var(--bg-color);
+    }
+
+    .container {
+        display: grid;
+        width: 100%;
+        height: 100vh; 
+    }
+
+    .sidebar {
+        border-right: 1px solid var(--accent-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: fixed;
+        width: 320px;
+        left: 0;
+        top: 0;
+        overflow-y: auto; 
+        height: 100vh;
+    }
+
+    .content {
+        margin-left: 320px;
+        padding: 20px 25px;
+        overflow-y: auto;
+        height: 100%;
+    }
+
+    .sidebar h1 { font-size: 1.4rem; }
+    .sidebar h2 { font-size: 1rem; }
+
+    #profile_pic {
+        width: 90%;
+        max-width: 100%;
+    }
 }

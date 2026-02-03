@@ -37,5 +37,12 @@
         "uni2_name": "Tecnólogo em Gastronomia | SENAC | Campos do Jordão - MG",
         "uni2_desc1": "Concluído em 2023",
         "uni2_desc2": "Principais habilidades adquiridas: Disciplina, organização de fluxo de trabalho, gestão de recursos e tempo."
+    },
+    "social": {
+        "github": "Visitar meu perfil no GitHub",
+        "linkedin": "Visitar meu perfil no LinkedIn",
+        "instagram": "Visitar meu perfil no Instagram",
+        "email": "Enviar um e-mail",
+        "whatsapp": "Entrar em contato via WhatsApp"
     }
 }

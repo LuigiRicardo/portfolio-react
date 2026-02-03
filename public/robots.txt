@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://luigiricardo.github.io/portfolio-react.github.io/
+Sitemap: https://luigiricardo.github.io/portfolio-react/

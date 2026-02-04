@@ -94,19 +94,19 @@ function Sidebar({ activeTab, onTabChange, isOpen, onClose }) {
 
             <div className="social">
                 <a href="https://github.com/LuigiRicardo" target="_blank" rel="noopener noreferrer" aria-label={t('social.github')}>
-                    <img src={githubLogo} alt="" aria-hidden="true" height="20px" width="20px" />
+                    <img src={githubLogo} alt="" aria-hidden="true"/>
                 </a>
                 <a href="https://www.linkedin.com/in/luigiricardo" target="_blank" rel="noopener noreferrer" aria-label={t('social.linkedin')}>
-                    <img src={linkedinLogo} alt="" aria-hidden="true" height="20px" width="20px" />
+                    <img src={linkedinLogo} alt="" aria-hidden="true"/>
                 </a>
                 <a href="https://www.instagram.com/luidigdin/" target="_blank" rel="noopener noreferrer" aria-label={t('social.instagram')}>
-                    <img src={instagramLogo} alt="" aria-hidden="true" height="20px" width="20px" />
+                    <img src={instagramLogo} alt="" aria-hidden="true"/>
                 </a>
                 <a href="mailto:luigi.ricardo123@gmail.com" target="_blank" rel="noopener noreferrer" aria-label={t('social.email')}>
-                    <img src={gmailLogo} alt="" aria-hidden="true" height="20px" width="20px" />
+                    <img src={gmailLogo} alt="" aria-hidden="true"/>
                 </a>
                 <a href="https://wa.me/5535998896271" target="_blank" rel="noopener noreferrer" aria-label={t('social.whatsapp')}>
-                    <img src={whatsappLogo} alt="" aria-hidden="true" height="20px" width="20px" />
+                    <img src={whatsappLogo} alt="" aria-hidden="true"/>
                 </a>
             </div>
         </header>

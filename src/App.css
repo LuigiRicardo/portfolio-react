@@ -48,7 +48,8 @@
 .menu-toggle {
     position: fixed;
     top: 15px;
-    left: 15px;
+    left: auto;
+    right: 15px;
     z-index: 100; /* Acima de tudo */
     background-color: var(--accent-color);
     color: var(--bg-color);
@@ -141,7 +142,7 @@ body {
 }
 
 .content {
-    padding: 48px 24px 24px 24px;
+    padding: 24px;
     text-align: left;
     animation: fadeIn 0.5s ease-in-out;
 }

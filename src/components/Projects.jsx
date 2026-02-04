@@ -43,7 +43,7 @@ function Projects() {
             // CHECAGEM DE VALIDADE
             if (savedData) {
                 const { timestamp } = JSON.parse(savedData)
-                // Se a diferença de tempo for MENOR que a duração, paramos aqui.
+                // Verifica se a diferença de tempo é que a duração.
                 // O usuário vê a versão cacheada e economizamos internet.
                 if (now - timestamp < CACHE_DURATION) {
                     console.log("Usando cache do GitHub (fresco)")

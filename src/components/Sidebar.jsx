@@ -48,7 +48,7 @@ function Sidebar({ activeTab, onTabChange, isOpen, onClose }) {
                     </button>
                 </div>
                 <div className="profile">
-                    <img src={profilePic} id="profile_pic" alt="Luigi Ricardo" width="200px" height="200px"/>
+                    <img src={profilePic} id="profile_pic" alt="Luigi Ricardo" width="200px" height="200px" fetchPriority='high' loading='eager'/>
                     <h1>Luigi Ricardo</h1>
                     <h2>{t('sidebar.role')}</h2>
                     <h2>{t('sidebar.role2')}</h2>

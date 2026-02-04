@@ -141,7 +141,7 @@ body {
 }
 
 .content {
-    padding: 24px;
+    padding: 48px 24px 24px 24px;
     text-align: left;
     animation: fadeIn 0.5s ease-in-out;
 }
@@ -306,7 +306,7 @@ nav button.active {
     margin: 0 0 12px;
     font-size: 0.9rem;
     line-height: 1.4;
-    flex-grow: 1; /* Faz o texto ocupar o espaço disponível */
+    flex-grow: 1;
 }
 
 .project-links {
@@ -348,7 +348,6 @@ nav button.active {
 
 /* DESKTOP (Media Queries) */
 @media (min-width: 1024px) {
-    /* Esconde elementos mobile no PC */
     .menu-toggle, 
     .close-btn, 
     .overlay {
@@ -362,6 +361,7 @@ nav button.active {
         box-shadow: none;
         transform: none;
     }
+    
     body {
         overflow: hidden; 
         background-color: var(--bg-color);

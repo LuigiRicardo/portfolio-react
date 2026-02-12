@@ -15,7 +15,7 @@ Um portfólio pessoal moderno, responsivo e profissional construído com **React
 
 ---
 
-## 📋 Sobre o Projeto
+## Sobre o Projeto
 
 Um portfólio responsivo e profissional que demonstra habilidades em desenvolvimento **fullstack**. O projeto implementa boas práticas modernas como:
 
@@ -29,7 +29,7 @@ Um portfólio responsivo e profissional que demonstra habilidades em desenvolvim
 
 ---
 
-## 🎨 Demo
+## Demo
 
 Veja o portfólio ao vivo: [Portfolio Live](https://LuigiRicardo.github.io/portfolio-react)
 
@@ -41,7 +41,7 @@ Veja o portfólio ao vivo: [Portfolio Live](https://LuigiRicardo.github.io/portf
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Tecnologia | Versão | Propósito |
 |-----------|--------|----------|
@@ -115,14 +115,14 @@ portfolio-react/
 ### Lazy Loading Strategy
 
 Componentes **dinamicamente carregados** para otimizar performance inicial:
-- `Experience` ⏱️ Carregado quando aba Experience é aberta
-- `Projects` ⏱️ Carregado quando aba Projects é aberta
-- `Education` ⏱️ Carregado quando aba Education é aberta
-- `About` 📍 Carregado imediatamente (seção inicial)
+- `Experience` Carregado quando aba Experience é aberta
+- `Projects` Carregado quando aba Projects é aberta
+- `Education` Carregado quando aba Education é aberta
+- `About` Carregado imediatamente (seção inicial)
 
 ---
 
-## 🌍 Internacionalização
+## Internacionalização
 
 O projeto suporta múltiplos idiomas via **i18next**:
 
@@ -144,7 +144,7 @@ Adicione novos idiomas em `src/locales/`.
 
 ---
 
-## 📊 Performance
+## Performance
 
 - **Compressão Gzip** automática no build
 - **Code splitting** inteligente com Vite
@@ -154,7 +154,7 @@ Adicione novos idiomas em `src/locales/`.
 
 ---
 
-## ♿ Acessibilidade
+## Acessibilidade
 
 O projeto implementa boas práticas de acessibilidade:
 - ✅ ARIA labels em botões de navegação

@@ -168,8 +168,7 @@ O projeto implementa boas práticas de acessibilidade:
 
 Desenvolvido por **Luigi Ricardo** como demonstração de habilidades em desenvolvimento web moderno.
 
-- Email: [seu-email@example.com](mailto:seu-email@example.com)
-- LinkedIn: [Seu LinkedIn](https://linkedin.com/in/luigiricardo)
+- LinkedIn: [Meu LinkedIn](https://linkedin.com/in/luigiricardo)
 - GitHub: [@LuigiRicardo](https://github.com/LuigiRicardo)
 
 ---

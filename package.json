@@ -1,8 +1,15 @@
 {
+  "name": "portfolio-react",
+  "version": "1.0.0",
+  "description": "Um portfólio pessoal moderno e responsivo construído com React, Vite e i18n. Demonstra habilidades em desenvolvimento fullstack com suporte a múltiplos idiomas.",
+  "author": "Luigi Ricardo",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LuigiRicardo/portfolio-react"
+  },
   "homepage": "https://LuigiRicardo.github.io/portfolio-react",
-  "name": "porfolio-react",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",

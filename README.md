@@ -9,7 +9,7 @@ Um portfólio pessoal moderno, responsivo e profissional construído com **React
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Portfolio Live](https://img.shields.io/badge/Portfolio-Live-brightgreen)](https://LuigiRicardo.github.io/portfolio-react)
 
-[Demo](#-demo) • [Requisitos](#-requisitos) • [Instalação](#-instalação) • [Uso](#-uso) • [Estrutura](#-estrutura) • [Contribuir](#-contribuir)
+[Demo](#-demo) • [Requisitos](#-requisitos) • [Estrutura](#-estrutura)
 
 </div>
 
@@ -34,10 +34,10 @@ Um portfólio responsivo e profissional que demonstra habilidades em desenvolvim
 Veja o portfólio ao vivo: [Portfolio Live](https://LuigiRicardo.github.io/portfolio-react)
 
 **Seções:**
-- 👤 Sobre Mim
-- 📚 Educação
-- 💼 Experiência
-- 🚀 Projetos
+- Sobre Mim
+- Educação
+- Experiência
+- Projetos
 
 ---
 
@@ -60,33 +60,9 @@ Veja o portfólio ao vivo: [Portfolio Live](https://LuigiRicardo.github.io/portf
 - **npm** >= 10.x (ou yarn/pnpm)
 - Git
 
----
-
-## 🚀 Instalação
-
-### 1️⃣ Clone o repositório
-```bash
-git clone https://github.com/LuigiRicardo/portfolio-react.git
-cd portfolio-react
-```
-
-### 2️⃣ Instale as dependências
-```bash
-npm install
-```
-
-### 3️⃣ Inicie o servidor de desenvolvimento
-```bash
-npm run dev
-```
-
-Acesse: [http://localhost:5173](http://localhost:5173)
-
----
-
 ## 📖 Uso
 
-### Disponíveis Scripts
+### Scripts Disponíveis
 
 ```bash
 # Desenvolvimento
@@ -107,7 +83,7 @@ npm run lint          # Verifica erros com ESLint
 
 ## 📁 Estrutura do Projeto
 
-```
+```bash
 portfolio-react/
 ├── src/
 │   ├── components/
@@ -188,39 +164,13 @@ O projeto implementa boas práticas de acessibilidade:
 
 ---
 
-## 🤝 Contribuindo
-
-Contribuições são bem-vindas! Para contribuir:
-
-1. **Fork** o repositório
-2. Crie uma **branch** para sua feature (`git checkout -b feature/AmazingFeature`)
-3. **Commit** suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. **Push** para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um **Pull Request**
-
-Veja [CONTRIBUTING.md](CONTRIBUTING.md) para detalhes completos.
-
----
-
-## 📝 Licença
-
-Este projeto está licenciado sob a [MIT License](LICENSE) - veja o arquivo [LICENSE](LICENSE) para detalhes.
-
----
-
-## 👨‍💻 Sobre
+## Sobre
 
 Desenvolvido por **Luigi Ricardo** como demonstração de habilidades em desenvolvimento web moderno.
 
-- 📧 Email: [seu-email@example.com](mailto:seu-email@example.com)
-- 🔗 LinkedIn: [Seu LinkedIn](https://linkedin.com/in/luigiricardo)
-- 🐙 GitHub: [@LuigiRicardo](https://github.com/LuigiRicardo)
-
----
-
-## 📞 Suporte
-
-Se encontrar algum problema, abra uma [Issue](https://github.com/LuigiRicardo/portfolio-react/issues).
+- Email: [seu-email@example.com](mailto:seu-email@example.com)
+- LinkedIn: [Seu LinkedIn](https://linkedin.com/in/luigiricardo)
+- GitHub: [@LuigiRicardo](https://github.com/LuigiRicardo)
 
 ---
 
